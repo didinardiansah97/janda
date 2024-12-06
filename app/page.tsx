@@ -464,46 +464,55 @@ export default function Home() {
             </div>
           )}  
               {result && (
-                  <div className="container mt-4">
-                    {/* Row untuk hasil */}
-                    <div className="row">
-                      {/* Kolom untuk Hasil Input */}
-                      <div className="col-12 col-md-6 mb-4">
-                        <div className="p-4 rounded shadow bg-primary text-white h-100">
-                          <h3 className="fw-bold fs-6">Hasil Input:</h3>
-                          <pre
-                            className="bg-light text-dark p-3 rounded"
-                            style={{
-                              fontSize: "clamp(14px, 2vw, 18px)", // Teks otomatis menyesuaikan ukuran layar
-                              wordWrap: "break-word", // Memastikan teks tidak meluber
-                              whiteSpace: "pre-wrap", // Mengatur teks agar bisa pindah baris
-                            }}
-                          >
-                            {result.inputData}
-                          </pre>
-                        </div>
+                <div className="container mt-4">
+                  {/* Kolom Vertikal */}
+                  <div className="row justify-content-center">
+                    {/* Card untuk Hasil Input */}
+                    <div className="col-12 col-lg-8 mb-4">
+                      <div
+                        className="p-4 rounded shadow text-white h-100"
+                        style={{
+                          background: "linear-gradient(135deg, #6f42c1, #20c997)", // Warna gradasi
+                        }}
+                      >
+                        <h3 className="fw-bold fs-5">Hasil Input:</h3>
+                        <pre
+                          className="bg-light text-dark p-3 rounded"
+                          style={{
+                            fontSize: "clamp(14px, 2vw, 18px)", // Teks otomatis menyesuaikan ukuran layar
+                            wordWrap: "break-word", // Memastikan teks tidak meluber
+                            whiteSpace: "pre-wrap", // Mengatur teks agar bisa pindah baris
+                          }}
+                        >
+                          {result.inputData}
+                        </pre>
                       </div>
+                    </div>
 
-                      {/* Kolom untuk Hasil Menu */}
-                      <div className="col-12 col-md-6">
-                        <div className="p-4 rounded shadow bg-secondary text-white h-100">
-                          <h3 className="fw-bold fs-4">Hasil Menu:</h3>
-                          <pre
-                            className="bg-light text-dark p-3 rounded"
-                            style={{
-                              fontSize: "clamp(14px, 2vw, 18px)", // Teks otomatis menyesuaikan ukuran layar
-                              wordWrap: "break-word", // Memastikan teks tidak meluber
-                              whiteSpace: "pre-wrap", // Mengatur teks agar bisa pindah baris
-                            }}
-                          >
-                            {result.menuData}
-                          </pre>
-                        </div>
+                    {/* Card untuk Hasil Menu */}
+                    <div className="col-12 col-lg-8 mb-4">
+                      <div
+                        className="p-4 rounded shadow text-white h-100"
+                        style={{
+                          background: "linear-gradient(135deg, #6f42c1, #20c997)", // Warna gradasi berbeda
+                        }}
+                      >
+                        <h3 className="fw-bold fs-5">Hasil Menu:</h3>
+                        <pre
+                          className="bg-light text-dark p-3 rounded"
+                          style={{
+                            fontSize: "clamp(14px, 2vw, 18px)", // Teks otomatis menyesuaikan ukuran layar
+                            wordWrap: "break-word", // Memastikan teks tidak meluber
+                            whiteSpace: "pre-wrap", // Mengatur teks agar bisa pindah baris
+                          }}
+                        >
+                          {result.menuData}
+                        </pre>
                       </div>
                     </div>
                   </div>
-                )}
-
+                </div>
+              )}
         </div>
       </div>
     </div>
