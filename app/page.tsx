@@ -316,7 +316,7 @@ export default function Home() {
               </div>
 
               {selectedMenu.karbohidrat &&
-                giziOptions[formData.selectedSakit]?.Karbohidrat.find(
+                giziOptions[formData.selectedSakit]?.Karbohidrat?.find(
                   (k) => k.id === selectedMenu.karbohidrat
                 )?.subOptions?.length > 0 && (
                   <div className="ms-4">
@@ -326,7 +326,7 @@ export default function Home() {
                       onChange={(e) => handleMenuSelect("subKarbohidrat", e.target.value)}
                     >
                       <option value="">Pilih Sub Menu Karbohidrat</option>
-                      {giziOptions[formData.selectedSakit]?.Karbohidrat.find(
+                      {giziOptions[formData.selectedSakit]?.Karbohidrat?.find(
                         (k) => k.id === selectedMenu.karbohidrat
                       )?.subOptions.map((subOption) => (
                         <option key={subOption.id} value={subOption.id}>
@@ -354,7 +354,7 @@ export default function Home() {
               </div>
 
               {selectedMenu.protein &&
-                giziOptions[formData.selectedSakit]?.Protein.find(
+                giziOptions[formData.selectedSakit]?.Protein?.find(
                   (p) => p.id === selectedMenu.protein
                 )?.subOptions?.length > 0 && (
                   <div className="ms-4">
@@ -364,7 +364,7 @@ export default function Home() {
                       onChange={(e) => handleMenuSelect("subProtein", e.target.value)}
                     >
                       <option value="">Pilih Sub Menu Protein</option>
-                      {giziOptions[formData.selectedSakit]?.Protein.find(
+                      {giziOptions[formData.selectedSakit]?.Protein?.find(
                         (p) => p.id === selectedMenu.protein
                       )?.subOptions.map((subOption) => (
                         <option key={subOption.id} value={subOption.id}>
@@ -392,7 +392,7 @@ export default function Home() {
               </div>
 
               {selectedMenu.sayur &&
-                giziOptions[formData.selectedSakit]?.Sayur.find(
+                giziOptions[formData.selectedSakit]?.Sayur?.find(
                   (s) => s.id === selectedMenu.sayur
                 )?.subOptions?.length > 0 && (
                   <div className="ms-4">
@@ -402,7 +402,7 @@ export default function Home() {
                       onChange={(e) => handleMenuSelect("subSayur", e.target.value)}
                     >
                       <option value="">Pilih Sub Menu Sayur</option>
-                      {giziOptions[formData.selectedSakit]?.Sayur.find(
+                      {giziOptions[formData.selectedSakit]?.Sayur?.find(
                         (s) => s.id === selectedMenu.sayur
                       )?.subOptions.map((subOption) => (
                         <option key={subOption.id} value={subOption.id}>
@@ -430,7 +430,7 @@ export default function Home() {
               </div>
 
               {selectedMenu.buah &&
-                giziOptions[formData.selectedSakit]?.Buah.find(
+                giziOptions[formData.selectedSakit]?.Buah?.find(
                   (b) => b.id === selectedMenu.buah
                 )?.subOptions?.length > 0 && (
                   <div className="ms-4">
@@ -440,7 +440,7 @@ export default function Home() {
                       onChange={(e) => handleMenuSelect("subBuah", e.target.value)}
                     >
                       <option value="">Pilih Sub Menu Buah</option>
-                      {giziOptions[formData.selectedSakit]?.Buah.find(
+                      {giziOptions[formData.selectedSakit]?.Buah?.find(
                         (b) => b.id === selectedMenu.buah
                       )?.subOptions.map((subOption) => (
                         <option key={subOption.id} value={subOption.id}>
