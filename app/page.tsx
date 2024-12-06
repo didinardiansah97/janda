@@ -464,20 +464,46 @@ export default function Home() {
             </div>
           )}  
               {result && (
-                <div className="container mt-4">
-                  {/* Kotak untuk Hasil Input */}
-                  <div className="p-4 rounded shadow bg-primary text-white mb-4">
-                    <h3 className="fw-bold fs-6">Hasil Input:</h3>
-                    <pre className="bg-light fw-bold fs-5 text-dark p-3 rounded">{result.inputData}</pre>
-                  </div>
+                  <div className="container mt-4">
+                    {/* Row untuk hasil */}
+                    <div className="row">
+                      {/* Kolom untuk Hasil Input */}
+                      <div className="col-12 col-md-6 mb-4">
+                        <div className="p-4 rounded shadow bg-primary text-white h-100">
+                          <h3 className="fw-bold fs-6">Hasil Input:</h3>
+                          <pre
+                            className="bg-light text-dark p-3 rounded"
+                            style={{
+                              fontSize: "clamp(14px, 2vw, 18px)", // Teks otomatis menyesuaikan ukuran layar
+                              wordWrap: "break-word", // Memastikan teks tidak meluber
+                              whiteSpace: "pre-wrap", // Mengatur teks agar bisa pindah baris
+                            }}
+                          >
+                            {result.inputData}
+                          </pre>
+                        </div>
+                      </div>
 
-                  {/* Kotak untuk Hasil Menu */}
-                  <div className="p-4 rounded shadow bg-secondary text-white">
-                    <h3 className="fw-bold fs-4">Hasil Menu:</h3>
-                    <pre className="bg-light fs-5 fw-bold text-dark p-3 rounded">{result.menuData}</pre>
+                      {/* Kolom untuk Hasil Menu */}
+                      <div className="col-12 col-md-6">
+                        <div className="p-4 rounded shadow bg-secondary text-white h-100">
+                          <h3 className="fw-bold fs-4">Hasil Menu:</h3>
+                          <pre
+                            className="bg-light text-dark p-3 rounded"
+                            style={{
+                              fontSize: "clamp(14px, 2vw, 18px)", // Teks otomatis menyesuaikan ukuran layar
+                              wordWrap: "break-word", // Memastikan teks tidak meluber
+                              whiteSpace: "pre-wrap", // Mengatur teks agar bisa pindah baris
+                            }}
+                          >
+                            {result.menuData}
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+
         </div>
       </div>
     </div>
