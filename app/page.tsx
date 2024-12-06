@@ -318,7 +318,7 @@ export default function Home() {
               {selectedMenu.karbohidrat &&
                 giziOptions[formData.selectedSakit]?.Karbohidrat?.find(
                   (k) => k.id === selectedMenu.karbohidrat
-                )?.subOptions?.length > 0 && (
+                )?.subOptions?.length && (
                   <div className="ms-4">
                     <label className="form-label">Sub Menu Karbohidrat:</label>
                     <select
@@ -356,7 +356,7 @@ export default function Home() {
               {selectedMenu.protein &&
                 giziOptions[formData.selectedSakit]?.Protein?.find(
                   (p) => p.id === selectedMenu.protein
-                )?.subOptions?.length > 0 && (
+                )?.subOptions?.length && (
                   <div className="ms-4">
                     <label className="form-label">Sub Menu Protein:</label>
                     <select
@@ -394,7 +394,7 @@ export default function Home() {
               {selectedMenu.sayur &&
                 giziOptions[formData.selectedSakit]?.Sayur?.find(
                   (s) => s.id === selectedMenu.sayur
-                )?.subOptions?.length > 0 && (
+                )?.subOptions?.length && (
                   <div className="ms-4">
                     <label className="form-label">Sub Menu Sayur:</label>
                     <select
@@ -432,7 +432,7 @@ export default function Home() {
               {selectedMenu.buah &&
                 giziOptions[formData.selectedSakit]?.Buah?.find(
                   (b) => b.id === selectedMenu.buah
-                )?.subOptions?.length > 0 && (
+                )?.subOptions?.length && (
                   <div className="ms-4">
                     <label className="form-label">Sub Menu Buah:</label>
                     <select
