@@ -13,14 +13,14 @@ export default function Home() {
   });
 
   const [selectedMenu, setSelectedMenu] = useState({
-    karbohidrat: "",
-    protein: "",
-    sayur: "",
-    buah: "",
-    subKarbohidrat: "",
-    subProtein: "",
-    subSayur: "",
-    subBuah: "",
+    karbohidrat: "1)",
+    subKarbohidrat: "*",
+    protein: "2)",  
+    subProtein: "*",
+    sayur: "3)",
+    subSayur: "*",
+    buah: "4)",
+    subBuah: "*",
   });
 
   const [subMenuKarbohidrat, setSubMenuKarbohidrat] = useState<{ id: string; name: string }[]>([]);
@@ -52,126 +52,126 @@ export default function Home() {
   > = {
     "(KEP)": {
       Karbohidrat: [
-        { id: "ubi", name: "Ubi Jalar", subOptions: [{ id: "ubiRebus", name: "Ubi Jalar Rebus" }] },
-        { id: "berasPutih", name: "Beras Putih", subOptions: [{ id: "nasiPutih", name: "Nasi Putih" }] },
-        { id: "makaroni", name: "Makaroni", subOptions: [{ id: "makaroniRebus", name: "Makaroni Rebus" }] },
+        { id: "ubi", name: "Ubi Jalar", subOptions: [{ id: "ubi Rebus", name: "Ubi Jalar Rebus" }] },
+        { id: "beras Putih", name: "Beras Putih", subOptions: [{ id: "nasi Putih", name: "Nasi Putih" }] },
+        { id: "makaroni", name: "Makaroni", subOptions: [{ id: "makaroni Rebus", name: "Makaroni Rebus" }] },
       ],
       Protein: [
         { id: "Ayam (protein hewani)", name: "Ayam (protein hewani)", subOptions: [{ id: "Ayam bakar kecap", name: "ayam bakar kecap" }] },
-        { id: "Ikan tuna protein hewani", name: "Ikan tuna protein hewani", subOptions: [{ id: "Ikan tuna bakar", name: "Ikan tuna bakar" }] },
-        { id: "Daging sapi Protein hewani", name: "Daging sapi protein hewani", subOptions: [{ id: "Rolade daging kukus", name: "Rolade daging kukus" }] },
-        { id: "Tempe Protein nabati", name: "Tempe Protein nabati", subOptions: [{ id: "Tempe bacem", name: "Tempe bacem" }] },
-        { id: "Tahu Protein nabati", name: "Tahu Protein nabati", subOptions: [{ id: "Tahu kukus sayur", name: "Tahu kukus sayur" }] },
-        { id: "Buncis Protein Nabati", name: "Buncis Protein Nabati", subOptions: [{ id: "Orak arik telur buncis", name: "Orak arik telur buncis" }] },
+        { id: "Ikan tuna protein hewani", name: "Ikan tuna (protein hewani)", subOptions: [{ id: "Ikan tuna bakar", name: "Ikan tuna bakar" }] },
+        { id: "Daging sapi Protein hewani", name: "Daging sapi (protein hewani)", subOptions: [{ id: "Rolade daging kukus", name: "Rolade daging kukus" }] },
+        { id: "Tempe Protein nabati", name: "Tempe (Protein nabati)", subOptions: [{ id: "Tempe bacem", name: "Tempe bacem" }] },
+        { id: "Tahu Protein nabati", name: "Tahu (Protein nabati)", subOptions: [{ id: "Tahu kukus sayur", name: "Tahu kukus sayur" }] },
+        { id: "Buncis Protein Nabati", name: "Buncis (Protein Nabati)", subOptions: [{ id: "Orak arik telur buncis", name: "Orak arik telur buncis" }] },
       ],
       Sayur: [
-        { id: "bayam", name: "Bayam", subOptions: [{ id: "sayurBeningBayam", name: "Sayur Bening Bayam" }] },
-        { id: "labuSiam", name: "Labu Siam", subOptions: [{ id: "supLabuSiamTahu", name: "Sup Labu Siam dan Tahu" }] },
-        { id: "wortel", name: "Wortel", subOptions: [{ id: "supWortel", name: "Sup Wortel" }] },
+        { id: "bayam", name: "Bayam", subOptions: [{ id: "sayur Bening Bayam", name: "Sayur Bening Bayam" }] },
+        { id: "labu Siam", name: "Labu Siam", subOptions: [{ id: "sup Labu Siam Tahu", name: "Sup Labu Siam dan Tahu" }] },
+        { id: "wortel", name: "Wortel", subOptions: [{ id: "sup Wortel", name: "Sup Wortel" }] },
       ],
       Buah: [
-        { id: "pisang", name: "Pisang", subOptions: [{ id: "pisangPotong", name: "Pisang Potong" }] },
-        { id: "pepaya", name: "Pepaya", subOptions: [{ id: "pepayaPotong", name: "Pepaya Potong" }] },
-        { id: "jambuBijii", name: "Jambu Biji", subOptions: [{ id: "jusJambuBiji", name: "Jus Jambu Biji" }] },
+        { id: "pisang", name: "Pisang", subOptions: [{ id: "pisang Potong", name: "Pisang Potong" }] },
+        { id: "pepaya", name: "Pepaya", subOptions: [{ id: "pepaya Potong", name: "Pepaya Potong" }] },
+        { id: "jambu Biji", name: "Jambu Biji", subOptions: [{ id: "jus Jambu Biji", name: "Jus Jambu Biji" }] },
       ],
     },
     hipertensi: {
       Karbohidrat: [
-        { id: "berasPutih", name: "Beras Putih", subOptions: [{ id: "nasiPutih", name: "Nasi Putih" }] },
-        { id: "kentang", name: "Kentang", subOptions: [{ id: "kentangKukusTanpaGaram", name: "Kentang Kukus Tanpa Garam" }] },
-        { id: "singkong", name: "Singkong", subOptions: [{ id: "singkongRebusTanpaGaram", name: "Singkong Rebus Tanpa Garam" }] },
+        { id: "beras Putih", name: "Beras Putih", subOptions: [{ id: "nasi Putih", name: "Nasi Putih" }] },
+        { id: "kentang", name: "Kentang", subOptions: [{ id: "kentang Kukus TanpaGaram", name: "Kentang Kukus Tanpa Garam" }] },
+        { id: "singkong", name: "Singkong", subOptions: [{ id: "singkong Rebus TanpaGaram", name: "Singkong Rebus Tanpa Garam" }] },
       ],
       Protein: [
-        { id: "ikanKembung", name: "Ikan Kembung Protein hewani", subOptions: [{ id: "ikanKembungGoreng", name: "Ikan Kembung Goreng" }] },
-        { id: "ayamTanpaKulit", name: "Ayam Tanpa Kulit Protein hewani", subOptions: [{ id: "ayamPanggangBagianDada", name: "Ayam Panggang Bagian Dada" }] },
-        { id: "telur", name: "Telur Protein hewani", subOptions: [{ id: "telurRebusBalado", name: "Telur Rebus Balado" }] },
-        { id: "kacangHijau", name: "Kacang Hijau protein nabati", subOptions: [{ id: "bakwanKacangHijau", name: "Bakwan Kacang Hijau" }] },
-        { id: "kacangTanah", name: "Kacang Tanah protein nabati", subOptions: [{ id: "sambalKacang", name: "Sambal Kacang" }] },
-        { id: "kacangMerah", name: "Kacang Merah protein nabati", subOptions: [{ id: "supKacangMerah", name: "Sup Kacang Merah" }] },
+        { id: "ikan Kembung", name: "Ikan Kembung (Protein hewani)", subOptions: [{ id: "ikan Kembung Goreng", name: "Ikan Kembung Goreng" }] },
+        { id: "ayam Tanpa Kulit", name: "Ayam Tanpa Kulit (Protein hewani)", subOptions: [{ id: "ayam Panggang Bagian Dada", name: "Ayam Panggang Bagian Dada" }] },
+        { id: "telur", name: "Telur Protein hewani", subOptions: [{ id: "telur Rebus Balado", name: "Telur Rebus Balado" }] },
+        { id: "kacang Hijau", name: "Kacang Hijau (protein nabati)", subOptions: [{ id: "bakwan Kacang Hijau", name: "Bakwan Kacang Hijau" }] },
+        { id: "kacang Tanah", name: "Kacang Tanah (protein nabati)", subOptions: [{ id: "sambal Kacang", name: "Sambal Kacang" }] },
+        { id: "kacang Merah", name: "Kacang Merah (protein nabati)", subOptions: [{ id: "sup Kacang Merah", name: "Sup Kacang Merah" }] },
       ],
       Sayur: [
-        { id: "sawiPutih", name: "Sawi Putih", subOptions: [{ id: "tumisSawiPutih", name: "Tumis Sawi Putih" }] },
-          { id: "labuKuning", name: "Labu Kuning", subOptions: [{ id: "supLabuKuningBening", name: "Sup Labu Kuning Bening" }] },
-          { id: "brokoli", name: "Brokoli", subOptions: [{ id: "supBrokoli", name: "Sup Brokoli" }] },
+         { id: "sawi Putih", name: "Sawi Putih", subOptions: [{ id: "tumis Sawi Putih", name: "Tumis Sawi Putih" }] },
+          { id: "labu Kuning", name: "Labu Kuning", subOptions: [{ id: "sup Labu Kuning Bening", name: "Sup Labu Kuning Bening" }] },
+          { id: "brokoli", name: "Brokoli", subOptions: [{ id: "Sup Brokoli", name: "Sup Brokoli" }] },
       ],
       Buah: [
-        { id: "mangga", name: "Mangga", subOptions: [{ id: "manggaPotong", name: "Mangga Potong" }] },
-          { id: "melon", name: "Melon", subOptions: [{ id: "melonPotong", name: "Melon Potong" }] },
-          { id: "apel", name: "Apel", subOptions: [{ id: "apelPotong", name: "Apel Potong" }] },
+        { id: "mangga", name: "Mangga", subOptions: [{ id: "Mangga Potong", name: "Mangga Potong" }] },
+          { id: "melon", name: "Melon", subOptions: [{ id: "Melon Potong", name: "Melon Potong" }] },
+          { id: "apel", name: "Apel", subOptions: [{ id: "Apel Potong", name: "Apel Potong" }] },
      ],
     },
     diabetes: {
       Karbohidrat: [
-        { id: "berasMerah", name: "Beras Merah", subOptions: [{ id: "nasiMerah", name: "Nasi Merah" }] },
-        { id: "kentang", name: "Kentang", subOptions: [{ id: "kentangKukus", name: "Kentang Kukus" }] },
-        { id: "ubiJalar", name: "Ubi Jalar", subOptions: [{ id: "ubiRebus", name: "Ubi Rebus" }] },
+        { id: "beras Merah", name: "Beras Merah", subOptions: [{ id: "nasi Merah", name: "Nasi Merah" }] },
+        { id: "kentang", name: "Kentang", subOptions: [{ id: "kentang Kukus", name: "Kentang Kukus" }] },
+        { id: "ubi Jalar", name: "Ubi Jalar", subOptions: [{ id: "ubi Rebus", name: "Ubi Rebus" }] },
       ],
       Protein: [
         { 
           id: "ikanLele", 
-          name: "Ikan Lele Protein Hewani", 
-          subOptions: [{ id: "ikanPepesKemangi", name: "Ikan Pepes Kemangi" }] 
+          name: "Ikan Lele (Protein Hewani)", 
+          subOptions: [{ id: "Ikan Pepes Kemangi", name: "Ikan Pepes Kemangi" }] 
         },
         { 
-          id: "dagingRendahLemak", 
-          name: "Daging Rendah Lemak", 
-          subOptions: [{ id: "tumisDagingCabaiHijau", name: "Tumis Daging Cabai Hijau" }] 
+          id: "Daging Rendah Lemak", 
+          name: "Daging Rendah Lemak (protein hewani)", 
+          subOptions: [{ id: "Tumis Daging Cabai Hijau", name: "Tumis Daging Cabai Hijau" }] 
         },
         { 
-          id: "ayamTanpaKulit", 
-          name: "Ayam Tanpa Kulit Protein Hewani", 
-          subOptions: [{ id: "ayamKukusJahe", name: "Ayam Kukus Jahe" }] 
+          id: "Ayam Tanpa Kulit", 
+          name: "Ayam Tanpa Kulit (Protein Hewani)", 
+          subOptions: [{ id: "Ayam Kukus Jahe", name: "Ayam Kukus Jahe" }] 
         },
         { 
           id: "tahu", 
-          name: "Tahu Protein Nabati", 
-          subOptions: [{ id: "tahuMasakJamur", name: "Tahu Masak Jamur" }] 
+          name: "Tahu (Protein Nabati)", 
+          subOptions: [{ id: "Tahu Masak Jamur", name: "Tahu Masak Jamur" }] 
         },
         { 
           id: "tempe", 
-          name: "Tempe Protein Nabati", 
-          subOptions: [{ id: "tempeGoreng", name: "Tempe Goreng" }] 
+          name: "Tempe (Protein Nabati)", 
+          subOptions: [{ id: "Tempe Goreng", name: "Tempe Goreng" }] 
         },
         { 
-          id: "kacangMerah", 
-          name: "Kacang Merah Protein Nabati", 
-          subOptions: [{ id: "kacangMerahRebus", name: "Kacang Merah Rebus" }] 
+          id: "Kacang Merah", 
+          name: "Kacang Merah (Protein Nabati)", 
+          subOptions: [{ id: "Kacang Merah Rebus", name: "Kacang Merah Rebus" }] 
         }
       ],
       Sayur: [
-        { id: "kangkung", name: "Kangkung", subOptions: [{ id: "sayurBeningKangkung", name: "Sayur Bening Kangkung" }] },
-        { id: "kol", name: "Kol", subOptions: [{ id: "sayurSupKolTomat", name: "Sayur Sup Kol Tomat" }] },
-        { id: "bayam", name: "Bayam", subOptions: [{ id: "sayurBeningBayam", name: "Sayur Bening Bayam" }] },
+        { id: "kangkung", name: "Kangkung", subOptions: [{ id: "Sayur Bening Kangkung", name: "Sayur Bening Kangkung" }] },
+        { id: "kol", name: "Kol", subOptions: [{ id: "Sayur Sup Kol Tomat", name: "Sayur Sup Kol Tomat" }] },
+        { id: "bayam", name: "Bayam", subOptions: [{ id: "Sayur Bening Bayam", name: "Sayur Bening Bayam" }] },
       ],
       Buah: [
-        { id: "jeruk", name: "Jeruk", subOptions: [{ id: "jerukKupas", name: "Jeruk Kupas" }] },
-        { id: "semangka", name: "Semangka", subOptions: [{ id: "semangkaPotong", name: "Semangka Potong" }] },
-        { id: "pepaya", name: "Pepaya", subOptions: [{ id: "pepayaPotong", name: "Pepaya Potong" }] },
+        { id: "jeruk", name: "Jeruk", subOptions: [{ id: "Jeruk Kupas", name: "Jeruk Kupas" }] },
+        { id: "semangka", name: "Semangka", subOptions: [{ id: "Semangka Potong", name: "Semangka Potong" }] },
+        { id: "pepaya", name: "Pepaya", subOptions: [{ id: "Pepaya Potong", name: "Pepaya Potong" }] },
       ],
     },
     "(GERD)": {
        Karbohidrat: [
-      { id: "berasMerah", name: "Beras Merah", subOptions: [{ id: "nasiMerah", name: "Nasi Merah" }] },
-      { id: "kentang", name: "Kentang", subOptions: [{ id: "kentangKukus", name: "Kentang Kukus" }] },
-      { id: "ubiJalar", name: "Ubi Jalar", subOptions: [{ id: "ubiRebus", name: "Ubi Rebus" }] },
+      { id: "Beras Merah", name: "Beras Merah", subOptions: [{ id: "Nasi Merah", name: "Nasi Merah" }] },
+      { id: "kentang", name: "Kentang", subOptions: [{ id: "Kentang Kukus", name: "Kentang Kukus" }] },
+      { id: "Ubi Jalar", name: "Ubi Jalar", subOptions: [{ id: "Ubi Rebus", name: "Ubi Rebus" }] },
     ],
     Protein: [
-      { id: "ikanLele", name: "Ikan Lele Protein Hewani", subOptions: [{ id: "ikanPepesKemangi", name: "Ikan Pepes Kemangi" }] },
-      { id: "dagingRendahLemak", name: "Daging Rendah Lemak Protein Hewani", subOptions: [{ id: "tumisDagingCabaiHijau", name: "Tumis Daging Cabai Hijau" }] },
-      { id: "ayamTanpaKulit", name: "Ayam Tanpa Kulit Protein Hewani", subOptions: [{ id: "ayamKukusJahe", name: "Ayam Kukus Jahe" }] },
-      { id: "tahu", name: "Tahu Protein Nabati", subOptions: [{ id: "tahuMasakJamur", name: "Tahu Masak Jamur" }] },
-      { id: "tempe", name: "Tempe Protein Nabati", subOptions: [{ id: "tempeGoreng", name: "Tempe Goreng" }] },
-      { id: "kacangMerah", name: "Kacang Merah Protein Nabati", subOptions: [{ id: "kacangMerahRebus", name: "Kacang Merah Rebus" }] }
+      { id: "ikanLele", name: "Ikan Lele (Protein Hewani)", subOptions: [{ id: "Ikan Pepes Kemangi", name: "Ikan Pepes Kemangi" }] },
+      { id: "Daging Rendah Lemak", name: "Daging Rendah Lemak (Protein Hewani)", subOptions: [{ id: "Tumis Daging Cabai Hijau", name: "Tumis Daging Cabai Hijau" }] },
+      { id: "Ayam Tanpa Kulit", name: "Ayam Tanpa Kulit (Protein Hewani)", subOptions: [{ id: "Ayam Kukus Jahe", name: "Ayam Kukus Jahe" }] },
+      { id: "tahu", name: "Tahu (Protein Nabati)", subOptions: [{ id: "Tahu Masak Jamur", name: "Tahu Masak Jamur" }] },
+      { id: "tempe", name: "Tempe (Protein Nabati)", subOptions: [{ id: "Tempe Goreng", name: "Tempe Goreng" }] },
+      { id: "Kacang Merah", name: "Kacang Merah (Protein Nabati)", subOptions: [{ id: "Kacang Merah Rebus", name: "Kacang Merah Rebus" }] }
     ],
     Sayur: [
-      { id: "kangkung", name: "Kangkung", subOptions: [{ id: "sayurBeningKangkung", name: "Sayur Bening Kangkung" }] },
-      { id: "kol", name: "Kol", subOptions: [{ id: "sayurSupKolTomat", name: "Sayur Sup Kol Tomat" }] },
-      { id: "bayam", name: "Bayam", subOptions: [{ id: "sayurBeningBayam", name: "Sayur Bening Bayam" }] },
+      { id: "kangkung", name: "Kangkung", subOptions: [{ id: "Sayur Bening Kangkung", name: "Sayur Bening Kangkung" }] },
+      { id: "kol", name: "Kol", subOptions: [{ id: "Sayur Sup KolTomat", name: "Sayur Sup Kol Tomat" }] },
+      { id: "bayam", name: "Bayam", subOptions: [{ id: "Sayur Bening Bayam", name: "Sayur Bening Bayam" }] },
     ],
     Buah: [
-      { id: "kangkung", name: "Kangkung", subOptions: [{ id: "sayurBeningKangkung", name: "Sayur Bening Kangkung" }] },
-      { id: "kol", name: "Kol", subOptions: [{ id: "sayurSupKolTomat", name: "Sayur Sup Kol Tomat" }] },
-      { id: "bayam", name: "Bayam", subOptions: [{ id: "sayurBeningBayam", name: "Sayur Bening Bayam" }] }
+      { id: "alpukat", name: "Alpukat", subOptions: [{ id: "jusal pukat", name: "Jus alpukat" }] },
+      { id: "pisang", name: "Pisang", subOptions: [{ id: "pisang potong", name: "pisang potong" }] },
+      { id: "pir", name: "Pir", subOptions: [{ id: "pir", name: "Jus pir" }] }
     ],
     },
   };
@@ -230,7 +230,7 @@ export default function Home() {
 
   return (
     <div className="container-fluid" style={{ paddingTop: "2rem" }}>
-      <h1 className="text-center mb-4">Rekomendasi Menu</h1>
+      <h1 className="text-center mb-4">Rekomendasi Menu berdasarkan penyakit yang di derita</h1>
       <div className="card shadow-lg mb-4">
         <div className="card-body">
           <h2 className="card-title">Input Data</h2>
@@ -462,16 +462,22 @@ export default function Home() {
                 </button>
               </div>
             </div>
-          )}
+          )}  
+              {result && (
+                <div className="container mt-4">
+                  {/* Kotak untuk Hasil Input */}
+                  <div className="p-4 rounded shadow bg-primary text-white mb-4">
+                    <h3 className="fw-bold fs-6">Hasil Input:</h3>
+                    <pre className="bg-light fw-bold fs-5 text-dark p-3 rounded">{result.inputData}</pre>
+                  </div>
 
-          {result && (
-            <div>
-              <h3>Hasil Input:</h3>
-              <pre>{result.inputData}</pre>
-              <h3>Hasil Menu:</h3>
-              <pre>{result.menuData}</pre>
-            </div>
-          )}
+                  {/* Kotak untuk Hasil Menu */}
+                  <div className="p-4 rounded shadow bg-secondary text-white">
+                    <h3 className="fw-bold fs-4">Hasil Menu:</h3>
+                    <pre className="bg-light fs-5 fw-bold text-dark p-3 rounded">{result.menuData}</pre>
+                  </div>
+                </div>
+              )}
         </div>
       </div>
     </div>
