@@ -328,7 +328,7 @@ export default function Home() {
                       <option value="">Pilih Sub Menu Karbohidrat</option>
                       {giziOptions[formData.selectedSakit]?.Karbohidrat?.find(
                         (k) => k.id === selectedMenu.karbohidrat
-                      )?.subOptions.map((subOption) => (
+                      )?.subOptions?.map((subOption) => (
                         <option key={subOption.id} value={subOption.id}>
                           {subOption.name}
                         </option>
@@ -366,7 +366,7 @@ export default function Home() {
                       <option value="">Pilih Sub Menu Protein</option>
                       {giziOptions[formData.selectedSakit]?.Protein?.find(
                         (p) => p.id === selectedMenu.protein
-                      )?.subOptions.map((subOption) => (
+                      )?.subOptions?.map((subOption) => (
                         <option key={subOption.id} value={subOption.id}>
                           {subOption.name}
                         </option>
@@ -404,7 +404,7 @@ export default function Home() {
                       <option value="">Pilih Sub Menu Sayur</option>
                       {giziOptions[formData.selectedSakit]?.Sayur?.find(
                         (s) => s.id === selectedMenu.sayur
-                      )?.subOptions.map((subOption) => (
+                      )?.subOptions?.map((subOption) => (
                         <option key={subOption.id} value={subOption.id}>
                           {subOption.name}
                         </option>
@@ -442,7 +442,7 @@ export default function Home() {
                       <option value="">Pilih Sub Menu Buah</option>
                       {giziOptions[formData.selectedSakit]?.Buah?.find(
                         (b) => b.id === selectedMenu.buah
-                      )?.subOptions.map((subOption) => (
+                      )?.subOptions?.map((subOption) => (
                         <option key={subOption.id} value={subOption.id}>
                           {subOption.name}
                         </option>
